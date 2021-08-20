@@ -58,7 +58,10 @@ window.onload = function () {
     }
 
     const generateRandomCards = () => {
-        const times = document.getElementById('inputRandom').value || 0
+        let times = document.getElementById('inputRandom').value || 0
+        if(times > 52){
+            times = 52
+        }
         const arr = []
         for(let cards = 1; cards <= times; cards++){
             const randomIndex = generateRandomIndex(deck.length - 1)
