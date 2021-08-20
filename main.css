@@ -1,0 +1,47 @@
+*{
+    font-family: sans-serif;
+}
+
+.deck-render{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+}
+.card{
+    width: 100px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 1.5em;
+    position: relative;
+    font-weight: bold;
+}
+
+.symbol{
+    position: absolute;
+    font-size: 1em;
+    padding: 5px 10px;
+}
+.top-left{
+    top: 0;
+    left: 0;
+}
+.bottom-right{
+    bottom: 0;
+    right: 0;
+}
+
+.actions{
+    padding-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
