@@ -82,21 +82,20 @@ window.onload = function () {
         });
     }
 
+
     const sortCards = (arr) => {
-        let wall = arr.length - 1; 
-        while (wall > 0){
-            let index = 0;
-            while (index < wall) {
-              if (arr[index].value > arr[index + 1].value) { 
-                let aux = arr[index]; 
-                arr[index] = arr[index + 1];
-                arr[index + 1] = aux;
+        let min = 0;
+        while (min < arr.length-1){
+            for(let i = min+1; i <= arr.length-1; i++) {
+              if (arr[min].value > arr[i].value) {
+                let aux = arr[min];
+                arr[min] = arr[i];
+                arr[i] = aux;
               }
-              index++;
             }
-            wall--;
+            min++;
         }
-        cards = arr        
+        cards = arr
     };
 
     const clearCards = () => {
