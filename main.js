@@ -90,9 +90,6 @@ window.onload = function () {
 
     const renderLogs = (rows) => {
         const logs = document.getElementById('logsList')
-        const render = []
-
-        console.log(rows, '<--')
 
         const card = (card, index) => {
             return `<div class="card">
@@ -166,7 +163,6 @@ window.onload = function () {
 
     document.getElementById('sortBtn').addEventListener('click', function () {
         const logRows = sortItems([...cards])
-        console.log(logRows)
         renderLogs(logRows)
 
     })
